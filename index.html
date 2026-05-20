@@ -1,77 +1,309 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Odyssey Movie Time</title>
 
 <style>
-body{
-background:#0f172a;
-font-family:Arial,sans-serif;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-.ticket{
-width:340px;
-background:white;
-border-radius:25px;
-padding:25px;
-box-shadow:0 15px 35px rgba(0,0,0,.25);
-}
-
-.header{
-background:#ef4444;
+body{
+background:#030d27;
 color:white;
-padding:15px;
-border-radius:15px;
-text-align:center;
+padding:30px;
+}
+
+.container{
+max-width:1300px;
+margin:auto;
+}
+
+.hero{
+display:flex;
+gap:40px;
+align-items:center;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.left{
+flex:1;
+}
+
+.right{
+flex:1;
+}
+
+h1{
+font-size:72px;
+line-height:1;
+margin-bottom:20px;
+}
+
+.red{
+color:#ff3b4e;
+}
+
+.subtitle{
 font-size:28px;
-font-weight:bold;
+margin-bottom:30px;
+color:#ddd;
 }
 
 .info{
-margin-top:20px;
-line-height:2;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:30px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+padding:15px 25px;
+border-radius:15px;
 font-size:18px;
 }
 
-.button{
-margin-top:25px;
+.btn{
+display:inline-block;
+background:#ff2f52;
+padding:18px 40px;
+border-radius:15px;
+font-size:22px;
+font-weight:bold;
+text-decoration:none;
+color:white;
+}
+
+.poster{
+width:100%;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+/* Ticket */
+
+.ticket{
+display:flex;
+overflow:hidden;
+border-radius:30px;
+background:white;
+margin-top:40px;
+color:black;
+min-height:500px;
+}
+
+.ticket-left{
+width:65%;
+padding:40px;
+}
+
+.ticket-right{
+width:35%;
+padding:40px;
+background:#fafafa;
+border-left:3px dashed #ccc;
 text-align:center;
 }
 
-.button a{
-background:#2563eb;
-color:white;
-padding:12px 25px;
-border-radius:12px;
-text-decoration:none;
+.ticket-title{
+background:#ff2f52;
+padding:20px;
+font-size:32px;
 font-weight:bold;
+border-radius:15px;
+color:white;
+margin-bottom:30px;
 }
-</style>
 
+.movie-row{
+display:flex;
+gap:25px;
+align-items:center;
+}
+
+.movie-image{
+width:220px;
+border-radius:20px;
+}
+
+.details{
+font-size:22px;
+line-height:2;
+}
+
+.qr{
+width:220px;
+margin-top:20px;
+}
+
+.footer{
+display:flex;
+justify-content:space-around;
+padding:30px;
+margin-top:30px;
+background:rgba(255,255,255,.05);
+border-radius:20px;
+font-size:20px;
+text-align:center;
+}
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+}
+
+.ticket{
+flex-direction:column;
+}
+
+.ticket-left,
+.ticket-right{
+width:100%;
+}
+
+h1{
+font-size:50px;
+}
+
+.movie-row{
+flex-direction:column;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="ticket">
+<div class="container">
 
-<div class="header">
-🎬 Odyssey Movie Time
+<div class="hero">
+
+<div class="left">
+
+<h1>
+🎬 Odyssey<br>
+<span class="red">Movie Time</span>
+</h1>
+
+<div class="subtitle">
+Lights. Camera. Fun!
 </div>
 
 <div class="info">
-📅 <b>Date:</b> 29 May 2026<br>
-🕒 <b>Time:</b> 8:45 AM<br>
-🎥 <b>Movie:</b> Swapped<br>
-📍 <b>Venue:</b> School Auditorium
+
+<div class="card">
+📅 29 May 2026
 </div>
 
-<div class="button">
-<a href="#">🎟 Virtual Ticket</a>
+<div class="card">
+🕒 8:45 AM
+</div>
+
+<div class="card">
+🎥 Swapped
+</div>
+
+<div class="card">
+📍 School Auditorium
+</div>
+
+</div>
+
+<a class="btn">
+🎟 Get Virtual Ticket
+</a>
+
+</div>
+
+<div class="right">
+
+<img src="https://i.imgur.com/N5XK4L7.jpeg"
+class="poster">
+
+</div>
+
+</div>
+
+
+<div class="ticket">
+
+<div class="ticket-left">
+
+<div class="ticket-title">
+🎟 VIRTUAL TICKET
+</div>
+
+<div class="movie-row">
+
+<img src="https://i.imgur.com/N5XK4L7.jpeg"
+class="movie-image">
+
+<div class="details">
+
+<b>Movie:</b> Swapped<br>
+<b>Date:</b> 29 May 2026<br>
+<b>Time:</b> 8:45 AM<br>
+<b>Venue:</b> School Auditorium<br>
+<b>Seat:</b> A-12<br>
+<b>Ticket ID:</b> ODYS-2026-0012
+
+</div>
+
+</div>
+
+</div>
+
+<div class="ticket-right">
+
+<h2>SCAN AT ENTRY</h2>
+
+<img
+class="qr"
+src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=OdysseyMovieTime">
+
+<p style="margin-top:20px;">
+Verified Ticket ✅
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer">
+
+<div>
+🎟<br><br>
+Easy Booking
+</div>
+
+<div>
+📱<br><br>
+Scan & Enter
+</div>
+
+<div>
+🍿<br><br>
+Enjoy Movie
+</div>
+
+<div>
+❤️<br><br>
+Create Memories
+</div>
+
 </div>
 
 </div>
